@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+    iamui:
+      image: "ailegorreta/iam-ui"
+      container_name: iam-ui
+      ports:
+        - "8190:8190"
+      deploy:
+        resources:
+          limits:
+            memory: 768m
+      networks:
+        - ailegorretaNet
+      environment:
+        - BPL_JVM_THREAD_COUNT=50
+        - SPRING_CLOUD_CONFIG_URI=http://config-service:8071
+        - SPRING_PROFILES_ACTIVE=local
+        - MICROSERVICE_CACHE_PROVIDER_URI=http://gateway-service:8072/cache  # no gateway will be http://cache-service:8351
+        - MICROSERVICE_AUDIT_PROVIDER_URI=http://gateway-service:8072/audit  # no gateway will be http://audit-service:8300
+        - MICROSERVICE_AUDIT_SUBSCRIPTION_HOST=audit-service                 # note: we do not use the gateway
+        - MICROSERVICE_IAM_PROVIDER_URI=http://gateway-service:8072/iam      # no gateway will be http://iam-service:8180
+networks:
+  ailegorretaNet:
+    external: true

@@ -1,0 +1,16 @@
+{
+  "productionMode": false,
+  "eagerServerLoad": false,
+  "npmFolder": "/Users/rlh/LocalDeveloper/ialegorreta-mktplace/iam-ui",
+  "node.version": "v18.16.0",
+  "node.download.root": "https://nodejs.org/dist/",
+  "frontendFolder": "/Users/rlh/LocalDeveloper/ialegorreta-mktplace/iam-ui/frontend",
+  "connect.javaSourceFolder": "/Users/rlh/LocalDeveloper/ialegorreta-mktplace/iam-ui/src/main/java",
+  "javaResourceFolder": "/Users/rlh/LocalDeveloper/ialegorreta-mktplace/iam-ui/src/main/resources",
+  "connect.applicationProperties": "/Users/rlh/LocalDeveloper/ialegorreta-mktplace/iam-ui/src/main/resources/application.properties",
+  "connect.openApiFile": "/Users/rlh/LocalDeveloper/ialegorreta-mktplace/iam-ui/build/generated-resources/openapi.json",
+  "project.frontend.generated": "/Users/rlh/LocalDeveloper/ialegorreta-mktplace/iam-ui/frontend/generated",
+  "pnpm.enable": false,
+  "require.home.node": false,
+  "build.folder": "build"
+}
